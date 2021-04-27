@@ -1,148 +1,148 @@
-//Nomecompleto: Luiz Gustavo da Costa GonÁalves MatrÌcula: UC20201242 Curso: CiÍncia da ComputaÁ„o
-#include<stdio.h> //Biblioteca que disponibiliza entrada e saÌda de dados dentro do programa.
-#include<locale.h> //Biblioteca que contÈm operaÁıes comuns como tratamento de entrada/saÌda e cadeia de caracteres.
-#include<stdlib.h> //Biblioteca que envolve alocaÁ„o de memÛria, controle de processos, conversıes e outras funÁıes.
-#include<string.h> //Biblioteca que fornece funÁıes, macros e definiÁıes para manipulaÁ„o de cadeias de caracteres e regiıes de memÛria.
+//Nomecompleto: Luiz Gustavo da Costa Gon√ßalves Matr√≠cula: UC20201242 Curso: Ci√™ncia da Computa√ß√£o
+#include<stdio.h> //Biblioteca que disponibiliza entrada e sa√≠da de dados dentro do programa.
+#include<locale.h> //Biblioteca que cont√©m opera√ß√µes comuns como tratamento de entrada/sa√≠da e cadeia de caracteres.
+#include<stdlib.h> //Biblioteca que envolve aloca√ß√£o de mem√≥ria, controle de processos, convers√µes e outras fun√ß√µes.
+#include<string.h> //Biblioteca que fornece fun√ß√µes, macros e defini√ß√µes para manipula√ß√£o de cadeias de caracteres e regi√µes de mem√≥ria.
 
 int main()
 {
-    //O nome das vari·veis foi escolhido com base no conceito de serem claras no seu proposito, como no livro cÛdigo limpo.
-    int quantidade_de_sessoes; //Vari·vel do tipo inteiro para armazenar a quantidade de sessıes que o cinema apresentou.
-    int quantidade_de_pessoas; //Vari·vel do tipo inteiro para armazenar a quantidade de pessoas que compareceram as sessıes.
-    int quantidade_masculino = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de pessoas do sexo masculino que compareceram as sessıes.
-    int quantidade_feminino = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de pessoas do sexo feminino que compareceram as sessıes.
-    int quantidade_de_criancas = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de crianÁas que compareceram as sessıes.
-    int quantidade_de_adolescentes = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de adolescentes que compareceram as sessıes.
-    int quantidade_de_adultos = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de adultos que compareceram as sessıes.
-    int quantidade_de_idosos = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de idosos que compareceram as sessıes.
-    int quantidade_adultos_m = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de adultos do sexo masculino que compareceram as sessıes.
-    int quantidade_adultos_f = 0; //Vari·vel do tipo inteiro para armazenar a quantidade de adultos do sexo feminino que compareceram as sessıes.
-    int idade; //Vari·vel do tipo inteiro para armazenar a idade das pessoas que compareceram as sessıes.
-    int i; //Vari·vel do tipo inteiro para armazenar valores genericos.
-	double avaliacao = 0; //Vari·vel do tipo double para armazenar as avaliaÁıes individuais do filme.
-    double avaliacao_total = 0; //Vari·vel do tipo double para armazenar a soma das avaliaÁıes individuais do filme.
-    double valor_do_ingresso; //Vari·vel do tipo double para armazenar o valor do ingresso.
-    char nome_do_filme[50]; //Vari·vel do tipo char para armazenar o nome do filme.
-    char genero; //Vari·vel do tipo char para armazenar o gÍnero das pessoas que compareceram as sessıes.
-    char escolha; //Vari·vel do tipo char para armazenar a escolha final de ver mais estatÌsticas sobre as sessıes.
+    //O nome das vari√°veis foi escolhido com base no conceito de serem claras no seu proposito, como no livro c√≥digo limpo.
+    int quantidade_de_sessoes; //Vari√°vel do tipo inteiro para armazenar a quantidade de sess√µes que o cinema apresentou.
+    int quantidade_de_pessoas; //Vari√°vel do tipo inteiro para armazenar a quantidade de pessoas que compareceram as sess√µes.
+    int quantidade_masculino = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de pessoas do sexo masculino que compareceram as sess√µes.
+    int quantidade_feminino = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de pessoas do sexo feminino que compareceram as sess√µes.
+    int quantidade_de_criancas = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de crian√ßas que compareceram as sess√µes.
+    int quantidade_de_adolescentes = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de adolescentes que compareceram as sess√µes.
+    int quantidade_de_adultos = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de adultos que compareceram as sess√µes.
+    int quantidade_de_idosos = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de idosos que compareceram as sess√µes.
+    int quantidade_adultos_m = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de adultos do sexo masculino que compareceram as sess√µes.
+    int quantidade_adultos_f = 0; //Vari√°vel do tipo inteiro para armazenar a quantidade de adultos do sexo feminino que compareceram as sess√µes.
+    int idade; //Vari√°vel do tipo inteiro para armazenar a idade das pessoas que compareceram as sess√µes.
+    int i; //Vari√°vel do tipo inteiro para armazenar valores genericos.
+	double avaliacao = 0; //Vari√°vel do tipo double para armazenar as avalia√ß√µes individuais do filme.
+    double avaliacao_total = 0; //Vari√°vel do tipo double para armazenar a soma das avalia√ß√µes individuais do filme.
+    double valor_do_ingresso; //Vari√°vel do tipo double para armazenar o valor do ingresso.
+    char nome_do_filme[50]; //Vari√°vel do tipo char para armazenar o nome do filme.
+    char genero; //Vari√°vel do tipo char para armazenar o g√™nero das pessoas que compareceram as sess√µes.
+    char escolha; //Vari√°vel do tipo char para armazenar a escolha final de ver mais estat√≠sticas sobre as sess√µes.
 
-    setlocale(LC_ALL,"Portuguese"); //FunÁ„o da biblioteca locale.h que habilita o uso de acentuaÁ„o da lingua portuguesa nos printfs.
+    setlocale(LC_ALL,"Portuguese"); //Fun√ß√£o da biblioteca locale.h que habilita o uso de acentua√ß√£o da lingua portuguesa nos printfs.
 
-    //Printfs para interaÁ„o com o usu·rio.
-    printf("Seja Bem-vindo ao aplicativo de estatÌsticas!\n\n");
-    printf("Para comeÁar insira a quantidade de sessıes do filme que deseja analisar.\n");
-    printf("Lembrando que para o funcionamento correto do aplicativo È necessario analisar 2 sessıes.\n");
-    printf("\nInsira a quantidade de sessıes: ");
-    scanf("%d", &quantidade_de_sessoes); //Armazenamento da quantidade de sessıes que ser„o utilizadas para a coleta de dados.
+    //Printfs para intera√ß√£o com o usu√°rio.
+    printf("Seja Bem-vindo ao aplicativo de estat√≠sticas!\n\n");
+    printf("Para come√ßar insira a quantidade de sess√µes do filme que deseja analisar.\n");
+    printf("Lembrando que para o funcionamento correto do aplicativo √© necessario analisar 2 sess√µes.\n");
+    printf("\nInsira a quantidade de sess√µes: ");
+    scanf("%d", &quantidade_de_sessoes); //Armazenamento da quantidade de sess√µes que ser√£o utilizadas para a coleta de dados.
 
-    //VerificaÁ„o da vari·vel quantidade_de_pessoas.
+    //Verifica√ß√£o da vari√°vel quantidade_de_pessoas.
     do
     {
         if(quantidade_de_sessoes < 2 || quantidade_de_sessoes > 2)
         {
-            printf("\nVocÍ inseriu \"%d\", essa quantidade È inv·lida.\n", quantidade_de_sessoes);
-            printf("Lembrando que para o funcionamento correto do aplicativo È necessario analisar 2 sessıes.\n");
-            fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-            printf("\nInsira a quantidade de sessıes: ");
-            scanf("%d",&quantidade_de_sessoes); //Releitura da vari·vel no caso dela for diferente do valor 2.
+            printf("\nVoc√™ inseriu \"%d\", essa quantidade √© inv√°lida.\n", quantidade_de_sessoes);
+            printf("Lembrando que para o funcionamento correto do aplicativo √© necessario analisar 2 sess√µes.\n");
+            fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            printf("\nInsira a quantidade de sess√µes: ");
+            scanf("%d",&quantidade_de_sessoes); //Releitura da vari√°vel no caso dela for diferente do valor 2.
         }
     }
     while(quantidade_de_sessoes < 2 || quantidade_de_sessoes > 2);
 
-    //Printfs para interaÁ„o com o usu·rio.
+    //Printfs para intera√ß√£o com o usu√°rio.
     printf("\nLegal, agora queremos saber o nome do filme.\n");
-    printf("Lembre-se de n„o deixar o campo abaixo vazio.\n");
+    printf("Lembre-se de n√£o deixar o campo abaixo vazio.\n");
     printf("\nDigite o nome do filme: ");
-    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
+    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
     fgets(nome_do_filme, 50, stdin); //Armazenamento do nome do filme.
-    //VerificaÁ„o da vari·vel nome_do_filme, caso ela seja igual a palavra "vazio" ou tenha apenas um caractere ser· feita a releitura.
+    //Verifica√ß√£o da vari√°vel nome_do_filme, caso ela seja igual a palavra "vazio" ou tenha apenas um caractere ser√° feita a releitura.
     do
     {
         if(strncmp(nome_do_filme, "vazio", 5) == 0 || strlen(nome_do_filme) == 1)
         {
-            printf("\nVocÍ inseriu um nome invalido.\n", nome_do_filme);
-            printf("Lembre-se de n„o deixar o campo abaixo vazio.\n");
+            printf("\nVoc√™ inseriu um nome invalido.\n", nome_do_filme);
+            printf("Lembre-se de n√£o deixar o campo abaixo vazio.\n");
             printf("\nDigite o nome do filme: ");
-            fflush(stdin);//funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-            fgets(nome_do_filme, 50, stdin); //Releitura da vari·vel.
+            fflush(stdin);//fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            fgets(nome_do_filme, 50, stdin); //Releitura da vari√°vel.
         }
     }
     while(strncmp(nome_do_filme, "vazio", 5) == 0 || strlen(nome_do_filme) == 1);
 
-    //Printfs para interaÁ„o com o usu·rio.
-    printf("\nUm cl·ssico!\n");
+    //Printfs para intera√ß√£o com o usu√°rio.
+    printf("\nUm cl√°ssico!\n");
     printf("\nAgora precisamos da quantidade de pessoas que assistiram ao filme.\n");
-    printf("Lembre-se que cada sess„o tem no mÌnimo 10 pessoas.\n");
-    printf("\nQuantidade de pessoas na sess„o: ");
-    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-    scanf("%d", &quantidade_de_pessoas); //Armazenamento da quantidade de pessoas que compareceram as sessıes.
+    printf("Lembre-se que cada sess√£o tem no m√≠nimo 10 pessoas.\n");
+    printf("\nQuantidade de pessoas na sess√£o: ");
+    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+    scanf("%d", &quantidade_de_pessoas); //Armazenamento da quantidade de pessoas que compareceram as sess√µes.
 
-    //VerificaÁ„o da vari·vel quantidade_de_pessoas, caso ela seja menor que 2 ser· feita a releitura.
+    //Verifica√ß√£o da vari√°vel quantidade_de_pessoas, caso ela seja menor que 10 ser√° feita a releitura.
     do
     {
-        if(quantidade_de_pessoas < 2)
+        if(quantidade_de_pessoas < 10)
         {
-            printf("\nVocÍ inseriu \"%d\", esse n˙mero È inv·lido.\n", quantidade_de_pessoas);
-            printf("Lembre-se que cada sess„o tem no mÌnimo 10 pessoas.\n");
-            printf("\nQuantidade de pessoas na sess„o: ");
-            fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-            scanf("%d", &quantidade_de_pessoas); //Releitura da vari·vel.
+            printf("\nVoc√™ inseriu \"%d\", esse n√∫mero √© inv√°lido.\n", quantidade_de_pessoas);
+            printf("Lembre-se que cada sess√£o tem no m√≠nimo 10 pessoas.\n");
+            printf("\nQuantidade de pessoas na sess√£o: ");
+            fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            scanf("%d", &quantidade_de_pessoas); //Releitura da vari√°vel.
         }
     }
-    while(quantidade_de_pessoas < 2);
+    while(quantidade_de_pessoas < 10);
 
-    //Printfs para interaÁ„o com o usu·rio.
-    printf("\nEstamos quase l·!\n");
-    printf("Agora sÛ precisamos saber o gÍnero e a idade das pessoas presente na sess„o.\n");
-    printf("Lembre-se de usar aspenas os caracteres \"M\" ou \"F\" independe de serem mai˙sculos ou min˙sculos.\n");
+    //Printfs para intera√ß√£o com o usu√°rio.
+    printf("\nEstamos quase l√°!\n");
+    printf("Agora s√≥ precisamos saber o g√™nero e a idade das pessoas presente na sess√£o.\n");
+    printf("Lembre-se de usar aspenas os caracteres \"M\" ou \"F\" independe de serem mai√∫sculos ou min√∫sculos.\n");
     printf("E que que a idade deve ser maior que 3 e menor que 100 anos.\n");
 
-    //Loop for onde a leitura do gÍnero, idade e avaliaÁ„o do filme ser„o feitas.
-    for(i = 0; i < quantidade_de_pessoas; /*O incremento È feito durante o loop*/)
+    //Loop for onde a leitura do g√™nero, idade e avalia√ß√£o do filme ser√£o feitas.
+    for(i = 0; i < quantidade_de_pessoas; /*O incremento √© feito durante o loop*/)
     {
-        printf("\nInsira o gÍnero da %d∫ pessoa: ", (i + 1));
-        fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-        genero = getchar(); //funÁ„o getchar para armazenar a vari·vel gÍnero
+        printf("\nInsira o g√™nero da %d¬∫ pessoa: ", (i + 1));
+        fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+        genero = getchar(); //fun√ß√£o getchar para armazenar a vari√°vel g√™nero
         if(genero == 'm' || genero == 'M')
         {
-            quantidade_masculino++; //Toda vez que o gÍnero for masculino essa v·riavel soma 1.
-            printf("\nPara melhorar a qualidade das estatÌsticas por favor avalie o filme de 0 a 5 estrelas: ");
-            fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-            scanf("%lf", &avaliacao); //Armazenamento da quantidade de pessoas que compareceram as sessıes.
+            quantidade_masculino++; //Toda vez que o g√™nero for masculino essa v√°riavel soma 1.
+            printf("\nPara melhorar a qualidade das estat√≠sticas por favor avalie o filme de 0 a 5 estrelas: ");
+            fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            scanf("%lf", &avaliacao); //Armazenamento da quantidade de pessoas que compareceram as sess√µes.
 
-            //VerificaÁ„o da vari·vel avaliacao. Caso ela seja menor que 0 ou maior que 5 È feita a releitura.
+            //Verifica√ß√£o da vari√°vel avaliacao. Caso ela seja menor que 0 ou maior que 5 √© feita a releitura.
             do
             {
                 if(avaliacao < 0 || avaliacao > 5)
                 {
-                    printf("\nVocÍ inseriu \"%.0lf\", esse n˙mero È inv·lido.\n", avaliacao);
+                    printf("\nVoc√™ inseriu \"%.0lf\", esse n√∫mero √© inv√°lido.\n", avaliacao);
                     printf("Por favor avalie o filme de 0 a 5 estrelas.\n");
-                    printf("\nInsira sua avaliaÁ„o: ");
-                    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-                    scanf("%lf", &avaliacao); //releitura da vari·vel.
+                    printf("\nInsira sua avalia√ß√£o: ");
+                    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+                    scanf("%lf", &avaliacao); //releitura da vari√°vel.
                 }
             }
             while(avaliacao < 0 || avaliacao > 5);
 
-            avaliacao_total += avaliacao; //ApÛs checar a vari·vel avaliacao ela È somada a um total.
+            avaliacao_total += avaliacao; //Ap√≥s checar a vari√°vel avaliacao ela √© somada a um total.
             avaliacao = 0; //Depois de ser somada ela tem o seu valor apagado para uma futura releitura.
 
-            printf("\nInsira a idade da %d∫ pessoa: ", (i + 1));
-            fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-            scanf("%d", &idade);//Armazenamento da idade das pessoas que compareceram as sessıes.
+            printf("\nInsira a idade da %d¬∫ pessoa: ", (i + 1));
+            fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            scanf("%d", &idade);//Armazenamento da idade das pessoas que compareceram as sess√µes.
 
-            //VerificaÁ„o da vari·vel idade. Caso ela seja menor que 3 ou maior que 100 È feita a releitura.
+            //Verifica√ß√£o da vari√°vel idade. Caso ela seja menor que 3 ou maior que 100 √© feita a releitura.
             do
             {
                 if(idade < 3 || idade > 100)
                 {
-                    printf("\nVocÍ inseriu \"%d\", esse n˙mero È inv·lido.\n", idade);
+                    printf("\nVoc√™ inseriu \"%d\", esse n√∫mero √© inv√°lido.\n", idade);
                     printf("Lembre-se de que a idade deve ser maior que 3 e menor que 100 anos.\n");
-                    printf("\nInsira a idade da %d∫ pessoa: ", (i + 1));
-                    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-                    scanf("%d", &idade); //releitura da vari·vel.
+                    printf("\nInsira a idade da %d¬∫ pessoa: ", (i + 1));
+                    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+                    scanf("%d", &idade); //releitura da vari√°vel.
 
-                    //Conjunto de ifs que determina qual dos contadores ser· acrescentado de acordo com a idade lida.
+                    //Conjunto de ifs que determina qual dos contadores ser√° acrescentado de acordo com a idade lida.
                     if(idade >= 3 && idade <= 13)
                     {
                         quantidade_de_criancas++;
@@ -166,7 +166,7 @@ int main()
                         i++;
                     }
                 }
-                else //Conjunto de ifs que determina qual dos contadores ser· acrescentado de acordo com a idade lida. Mas dessa vez caso a idade sej· certa logo de primeira.
+                else //Conjunto de ifs que determina qual dos contadores ser√° acrescentado de acordo com a idade lida. Mas dessa vez caso a idade sej√° certa logo de primeira.
                 {
                     if(idade >= 3 && idade <= 13)
                     {
@@ -197,43 +197,43 @@ int main()
         else if(genero == 'f' || genero == 'F')
         {
             quantidade_feminino++;
-            printf("\nPara melhorar a qualidade das estatÌsticas por favor avalie o filme de 0 a 5 estrelas: ");
-            fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-            scanf("%lf", &avaliacao); //Armazenamento da quantidade de pessoas que compareceram as sessıes.
+            printf("\nPara melhorar a qualidade das estat√≠sticas por favor avalie o filme de 0 a 5 estrelas: ");
+            fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            scanf("%lf", &avaliacao); //Armazenamento da quantidade de pessoas que compareceram as sess√µes.
 
-            //VerificaÁ„o da vari·vel avaliacao. Caso ela seja menor que 0 ou maior que 5 È feita a releitura.
+            //Verifica√ß√£o da vari√°vel avaliacao. Caso ela seja menor que 0 ou maior que 5 √© feita a releitura.
             do
             {
                 if(avaliacao < 0 || avaliacao > 5)
                 {
-                    printf("\nVocÍ inseriu \"%.0lf\", esse n˙mero È inv·lido.\n", avaliacao);
+                    printf("\nVoc√™ inseriu \"%.0lf\", esse n√∫mero √© inv√°lido.\n", avaliacao);
                     printf("Por favor avalie o filme de 0 a 5 estrelas.\n");
-                    printf("\nInsira sua avaliaÁ„o: ");
-                    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-                    scanf("%lf", &avaliacao); //releitura da vari·vel.
+                    printf("\nInsira sua avalia√ß√£o: ");
+                    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+                    scanf("%lf", &avaliacao); //releitura da vari√°vel.
                 }
             }
             while(avaliacao < 0 || avaliacao > 5);
 
-            avaliacao_total += avaliacao; //ApÛs checar a vari·vel avaliacao ela È somada a um total.
+            avaliacao_total += avaliacao; //Ap√≥s checar a vari√°vel avaliacao ela √© somada a um total.
             avaliacao = 0; //Depois de ser somada ela tem o seu valor apagado para uma futura releitura.
 
-            printf("\nInsira a idade da %d∫ pessoa: ", (i + 1));
-            fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-            scanf("%d", &idade);//Armazenamento da idade das pessoas que compareceram as sessıes.
+            printf("\nInsira a idade da %d¬∫ pessoa: ", (i + 1));
+            fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            scanf("%d", &idade);//Armazenamento da idade das pessoas que compareceram as sess√µes.
 
-            //VerificaÁ„o da vari·vel idade. Caso ela seja menor que 3 ou maior que 100 È feita a releitura.
+            //Verifica√ß√£o da vari√°vel idade. Caso ela seja menor que 3 ou maior que 100 √© feita a releitura.
             do
             {
                 if(idade < 3 || idade > 100)
                 {
-                    printf("\nVocÍ inseriu \"%d\", esse n˙mero È inv·lido.\n", idade);
+                    printf("\nVoc√™ inseriu \"%d\", esse n√∫mero √© inv√°lido.\n", idade);
                     printf("Lembre-se de que a idade deve ser maior que 3 e menor que 100 anos.\n");
-                    printf("\nInsira a idade da %d∫ pessoa: ", (i + 1));
-                    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-                    scanf("%d", &idade); //releitura da vari·vel.
+                    printf("\nInsira a idade da %d¬∫ pessoa: ", (i + 1));
+                    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+                    scanf("%d", &idade); //releitura da vari√°vel.
 
-                    //Conjunto de ifs que determina qual dos contadores ser· acrescentado de acordo com a idade lida.
+                    //Conjunto de ifs que determina qual dos contadores ser√° acrescentado de acordo com a idade lida.
                     if(idade >= 3 && idade <= 13)
                     {
                         quantidade_de_criancas++;
@@ -257,7 +257,7 @@ int main()
                         i++;
                     }
                 }
-                else //Conjunto de ifs que determina qual dos contadores ser· acrescentado de acordo com a idade lida. Mas dessa vez caso a idade sej· certa logo de primeira.
+                else //Conjunto de ifs que determina qual dos contadores ser√° acrescentado de acordo com a idade lida. Mas dessa vez caso a idade sej√° certa logo de primeira.
                 {
                     if(idade >= 3 && idade <= 13)
                     {
@@ -285,43 +285,43 @@ int main()
             }
             while(idade < 3 || idade > 100);
         }
-        else //Caso o gÍnero seja inv·lido ser„o printadas as seguintes informaÁıes:
+        else //Caso o g√™nero seja inv√°lido ser√£o printadas as seguintes informa√ß√µes:
         {
-            printf("\nVocÍ inseriu \"%c\", esse caractere È inv·lido.\n", genero);
-            printf("Lembre-se de usar aspenas os caracteres \"M\" ou \"F\" independe de serem mai˙sculos ou min˙sculos.\n");
+            printf("\nVoc√™ inseriu \"%c\", esse caractere √© inv√°lido.\n", genero);
+            printf("Lembre-se de usar aspenas os caracteres \"M\" ou \"F\" independe de serem mai√∫sculos ou min√∫sculos.\n");
         }
     }
-    printf("\nPara melhorar a qualidade das estatÌsticas por favor insira o preÁo individual do ingresso para uma ˙nica sess„o: ");
-    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
+    printf("\nPara melhorar a qualidade das estat√≠sticas por favor insira o pre√ßo individual do ingresso para uma √∫nica sess√£o: ");
+    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
     scanf("%lf", &valor_do_ingresso); // armazenamento do valor do inngresso.
 
     //printfs dos resultados finais.
     system("cls");
-    printf("Obrigado por usar nosso aplicativo, aqui est„o os seus resultados: \n");
+    printf("Obrigado por usar nosso aplicativo, aqui est√£o os seus resultados: \n");
     printf("\nNome do filme: %s", nome_do_filme);
-    printf("\nA quantidade de pessoas do sexo masculino que compareceram as sessıes È:  %d\n", quantidade_masculino);
-    printf("A quantidade de pessoas do sexo feminino que compareceram as sessıes È:  %d\n", quantidade_feminino);
-    printf("\nSegundo a classificaÁ„o de idade:\n");
-    printf("\n%d crianÁas compareceram a sess„o.\n",quantidade_de_criancas);
-    printf("%d adolescentes compareceram a sess„o.\n",quantidade_de_adolescentes);
-    printf("%d adultos compareceram a sess„o.\n",quantidade_de_adultos);
-    printf("%d idosos compareceram a sess„o.\n",quantidade_de_idosos);
-    printf("\nA quantidade total de adultos do sexo masculino È: %d.\n",quantidade_adultos_m);
-    printf("A quantidade total de adultos do sexo feminino È: %d.\n",quantidade_adultos_f);
+    printf("\nA quantidade de pessoas do sexo masculino que compareceram as sess√µes √©:  %d\n", quantidade_masculino);
+    printf("A quantidade de pessoas do sexo feminino que compareceram as sess√µes √©:  %d\n", quantidade_feminino);
+    printf("\nSegundo a classifica√ß√£o de idade:\n");
+    printf("\n%d crian√ßas compareceram a sess√£o.\n",quantidade_de_criancas);
+    printf("%d adolescentes compareceram a sess√£o.\n",quantidade_de_adolescentes);
+    printf("%d adultos compareceram a sess√£o.\n",quantidade_de_adultos);
+    printf("%d idosos compareceram a sess√£o.\n",quantidade_de_idosos);
+    printf("\nA quantidade total de adultos do sexo masculino √©: %d.\n",quantidade_adultos_m);
+    printf("A quantidade total de adultos do sexo feminino √©: %d.\n",quantidade_adultos_f);
 
-    //InteraÁ„o com o usu·rio sobre mais estatÌsticas das sessıes
-    printf("\nDeseja saber mais estatisticas sobre as sessıes?\n");
-    printf("Se sim pressione \"S\".\nSe n„o pressione \"N\".\n");
-    fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
-    escolha = getchar(); //funÁ„o getchar para armazenar a vari·vel escolha.
+    //Intera√ß√£o com o usu√°rio sobre mais estat√≠sticas das sess√µes
+    printf("\nDeseja saber mais estatisticas sobre as sess√µes?\n");
+    printf("Se sim pressione \"S\".\nSe n√£o pressione \"N\".\n");
+    fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
+    escolha = getchar(); //fun√ß√£o getchar para armazenar a vari√°vel escolha.
 
-    //verificaÁ„o da vari·vel escolha.
+    //verifica√ß√£o da vari√°vel escolha.
     do
     {
         if(escolha == 'S' || escolha == 's')
         {
-            printf("\nA mÈdia de avaliaÁ„o do filme foi: %.1lf estrelas.", (avaliacao_total / quantidade_de_pessoas));
-            printf("\nA arrecadaÁ„o total foi: %.2lf R$.", ((valor_do_ingresso * (double)quantidade_de_pessoas) * 2.0));
+            printf("\nA m√©dia de avalia√ß√£o do filme foi: %.1lf estrelas.", (avaliacao_total / quantidade_de_pessoas));
+            printf("\nA arrecada√ß√£o total foi: %.2lf R$.", ((valor_do_ingresso * (double)quantidade_de_pessoas) * 2.0));
             break;
         }
         else if(escolha == 'N' || escolha == 'n')
@@ -330,9 +330,9 @@ int main()
         }
         else
         {
-            printf("VocÍ pressionou \"%c\".\n", escolha);
+            printf("Voc√™ pressionou \"%c\".\n", escolha);
             printf("Por favor pressione apenas \"S\" ou \"N\".\n");
-            fflush(stdin); //funÁ„o que limpa o buffer do teclado, usada para evitar erros inesperados.
+            fflush(stdin); //fun√ß√£o que limpa o buffer do teclado, usada para evitar erros inesperados.
             escolha = getchar(); // releitura da escolha.
         }
     }
