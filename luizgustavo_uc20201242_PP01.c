@@ -19,7 +19,7 @@ int main()
     int quantidade_adultos_f = 0; //Variável do tipo inteiro para armazenar a quantidade de adultos do sexo feminino que compareceram as sessões.
     int idade; //Variável do tipo inteiro para armazenar a idade das pessoas que compareceram as sessões.
     int i; //Variável do tipo inteiro para armazenar valores genericos.
-	double avaliacao = 0; //Variável do tipo double para armazenar as avaliações individuais do filme.
+    double avaliacao = 0; //Variável do tipo double para armazenar as avaliações individuais do filme.
     double avaliacao_total = 0; //Variável do tipo double para armazenar a soma das avaliações individuais do filme.
     double valor_do_ingresso; //Variável do tipo double para armazenar o valor do ingresso.
     char nome_do_filme[50]; //Variável do tipo char para armazenar o nome do filme.
